@@ -1,0 +1,24 @@
+<pre>
+    form elemnts(value)
+
+    nom from elemnts 1) innerHTML  2) innerTEXT
+</pre>
+<script>
+    function getName() {
+        var nametxt=document.getElementById("name");
+        var name=nametxt.value
+
+        alert(name)
+
+    }
+    function setName(name){
+        var nametxt=document.getElementById("name");
+        nametxt.value='prabu bhaiiii'
+    }
+
+</script>
+
+<input id="name" placeholder="Enter a name" size="20">
+<button onclick="setName(name)"> set name</button>
+<button onclick="getName()"> Get Name</button>
+

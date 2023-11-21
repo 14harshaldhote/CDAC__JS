@@ -1,0 +1,29 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    
+    function setName(name){
+        var name=document.getElementById("name").value;
+        document.getElementById("finalname").value= name;
+    
+    }
+
+</script>
+</head>
+<body>
+    <input id="name" placeholder="Enter a name" size="20">
+<button onclick="setName()"> set name</button>
+<input id="finalname" placeholder="auto set name" size="20">
+    
+</body>
+</html>
