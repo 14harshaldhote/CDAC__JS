@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+
+        }
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        table {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5%;
+            width: 29vw;
+
+
+        }
+
+        .box {
+            background-color: rgb(124, 117, 173);
+            padding: 10px 0;
+            width: 32vw;
+            margin : auto;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form method="get" action="welcome.html" autocomplete="off">
+            <table width="">
+                <thead>
+                    <tr>
+                        <th colspan="2"> Register Here</th>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="name" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input type="text" name="age" min="1" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td>
+                    <td>
+                        <input type="tel" name="mobile" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email.</td>
+                    <td>
+                        <input type="email" name="email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="cpassword" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        Male : <input type="radio" name="gender" required />
+                        Female : <input type="radio" name="gender" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select name="city" required>
+                            <option value="">Select City</option>
+                            <option selected value="ngp">Nagpur</option>
+                            <option value="nsk">Nashik</option>
+                            <option value="pune">Pune</option>
+                            <option value="cst">Mumbai</option>
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea name="address" rows="10" cols="30"> </textarea>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="Register" />
+                        <button type="reset"> Reset </button>
+
+                    </th>
+                </tr>
+
+                <tfoot>
+                    <th colspan="2">Bhrde bhai form</th>
+                </tfoot>
+
+                <tr>
+                    <th colspan="2">
+                        <input type="checkbox" value="ignore"> 
+                        <a href="">terms and condition</a> 
+
+                    </th>
+                   
+                </tr>
+
+
+
+
+
+
+            </table>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
