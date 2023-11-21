@@ -8,7 +8,14 @@ let persson={
 
     setName:function(name){
         this.name = name;},
+    getMobile:function(){
+        return this.mobile},
+    setMobile:function(mobile){
+        this.mobile = mobile;},
+    }
+    
 
-}
+
 console.log(persson.age);
 console.log(persson.getName());
+console.log(persson.getMobile());
