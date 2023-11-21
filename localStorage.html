@@ -1,8 +1,42 @@
-<pre>
-    &nbsp; &nbsp; &nbsp;<h1>Local Storage</h1>
-    
-    &nbsp; &nbsp;setItem(key, value)
-    &nbsp; &nbsp;getItem(key) it will return the value
-    &nbsp; &nbsp;removeItem(key) it will remove the value
- 
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <pre>
+        &nbsp; &nbsp;setItem(key, value)
+        &nbsp; &nbsp;getItem(key) it will return the value
+        &nbsp; &nbsp;removeItem(key) it will remove the value
+    </pre>
+
+    <input type="text" placeholder="enter name" id="name">
+    <button onclick="saveName()">Save Name</button>
+    <button onclick="getName()">Get Name</button>
+    <button onclick="removeName()">Remove Name</button>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById('name').value;
+            localStorage.setItem('name', name);  // Removed the space after 'name'
+        }
+
+        function getName() {
+            const name = localStorage.getItem('name');
+            if (name !== null) {
+                console.log(name);
+            } else {
+                console.log('Name not found in local storage.');
+            }
+        }
+
+        function removeName() {
+            localStorage.removeItem('name');
+        }
+    </script>
+</body>
+</html>
