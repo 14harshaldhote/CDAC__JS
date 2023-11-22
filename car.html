@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        function Car(cname,model,year,company) {
+            this.cname = cname;
+            this.model = model;
+            
+            this.year = year;
+            this.company = company;
+
+            this.setName=function(cname) { this.cname=cname}
+            this.getName=function() { return this.cname}
+        }
+        c1=new Car("FMC","553-M",2019,"Masda")
+        c2=new Car("lamo","5ejkjk53-M",2009,"LAmadao")
+
+        console.log(c1)
+        console.log(c2)
+
+
+    </script>
+</head>
+<body>
+    <h1> Welcome car</h1>
+</body>
+</html>

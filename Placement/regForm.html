@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Placement Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea, button {
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        label[for="gender"] {
+            margin-bottom: 8px;
+        }
+
+        select#gender {
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .gender-radio-group {
+            margin-bottom: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>College Placement Registration</h1>
+        <form action="#" method="post">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="computerScience">Computer Science</option>
+                <option value="electricalEngineering">Electrical Engineering</option>
+                <option value="mechanicalEngineering">Mechanical Engineering</option>
+            </select>
+
+            <label for="qualification">Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required>
+
+            <label for="cgpa">CGPA:</label>
+            <input type="text" id="cgpa" name="cgpa" required>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="gender" class="gender-label">Gender:</label>
+            <div class="gender-radio-group">
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    Male
+                </label>
+
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    Female
+                </label>
+
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    Other
+                </label>
+            </div>
+
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
