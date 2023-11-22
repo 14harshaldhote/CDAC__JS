@@ -1,5 +1,139 @@
 <pre>
     <h1>Arrays</h1>
-    let n=[]
-    new  
+    let n=[3,34,11,76,98,123,1]
+    arr = new Array(23,53,768,98,34,1)
+    let n=[3,34,11,76,98,123,1]
+    console.log(n)
+
+    arr = new Array(23,53,768,98,34,1)
+    console.log(arr)
+
+    let n1=[5,"hello","world", true,{name:"run"}]
+    console.log(n1)
+
+    console.log(n1[1])
+    console.log(n1[4].name)
+    n1[4].age=15
+    console.log(n1[4].age)
+
+
+   console.log( n1.length)
+
+   n1.push="ring"
+   console.log(n1)
+   console.log( n1.length)
+
+
+   n1.unshift(5555)
+   console.log(n1)
+
+   n1.shift()
+   console.log(n1)
+   n1.shift()
+   console.log(n1)
+
+   //for each, for in, for off these are three typr of for 
+   //for each is a function of array 
+
+   //high order function
+    n1.forEach(function(e){ //its a ananynomysu function 
+        // this function is called as call back function
+        console.log("value = ",e)
+
+    });
+
+    n1.forEach(function(e,i, val){ //its a ananynomysu function 
+        // this function is called as call back function
+        console.log(i,")", "value = ",e)
+
+    },5);
+
+   
+    <h3>map() and filter()</h3>
+    //filter()
+    let nn=[3,34,11,76,98,123,1]
+    console.log(n)
+    let arrNew1=nn.filter(function(e){
+        return e%2==0
+
+    })
+    console.log(arrNew1)
+
+    //map() 
+    let arrNew2=nn.map(function(e){
+        return e*2
+    })
+    console.log(arrNew2)
+
+
 </pre>
+<script >
+    let n=[3,34,11,76,98,123,1]
+    console.log(n)
+
+    arr = new Array(23,53,768,98,34,1)
+    console.log(arr)
+
+    let n1=[5,"hello","world", true,{name:"run"}]
+    console.log(n1)
+
+    console.log(n1[1])
+    console.log(n1[4].name)
+    n1[4].age=15
+    console.log(n1[4].age)
+
+
+   console.log( n1.length)
+
+   n1.push="ring"
+   console.log(n1)
+   console.log( n1.length)
+
+
+   n1.unshift(5555)
+   console.log(n1)
+
+   n1.shift()
+   console.log(n1)
+   n1.shift()
+   console.log(n1)
+
+   //for each, for in, for off these are three typr of for 
+   //for each is a function of array 
+
+   //high order function
+    n1.forEach(function(e){ //its a ananynomysu function 
+        // this function is called as call back function
+        console.log("value = ",e)
+
+    });
+
+    n1.forEach(function(e,i, val){ //its a ananynomysu function 
+        // this function is called as call back function
+        console.log(i,")", "value = ",e)
+
+    },5);
+
+    // map() and filter()
+    //filter()
+    let nn=[3,34,11,76,98,123,1]
+    console.log(n)
+    let arrNew1=nn.filter(function(e){
+        return e%2==0
+
+    })
+    console.log(arrNew1)
+
+    //map() 
+    let arrNew2=nn.map(function(e){
+        return e*2
+    })
+    console.log(arrNew2)
+
+
+
+
+
+
+
+</script>
