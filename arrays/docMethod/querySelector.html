@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        ele = querySelector(string css-selector) //first occurrence return
+        array = querySelectorAll(string css-selector)
+    </pre>
+    <p class="para1">pra hello 1</p>
+    <p class="para1">pra hello 2</p>
+    <p class="para2">hello world 1</p>
+    <p class="para1">pra hello 3</p>
+    <p class="para2">hello world 2</p>
+    <p class="para1">pra hello 4</p>
+    <p class="para2">hello world 3</p>
+
+    <script>
+       
+        const arrpar1 = Array.from(document.querySelectorAll(".para1"));
+        const arrpar2 = Array.from(document.querySelectorAll(".para2"));
+     
+        console.log("--------------------------------");
+
+        arrpar1.forEach(function (e) {
+            console.log(e.innerHTML);
+            e.style.backgroundColor = "red";
+        });
+
+        console.log("--------------------------------");
+
+        arrpar2.forEach(function (e) {
+            console.log(e.innerHTML);
+        });
+    </script>
+</body>
+
+</html>
