@@ -1,0 +1,45 @@
+<pre>
+    let arr=[8,32,5,7,2,7,1,99,53,24]
+    
+    // array.splice(index, remove-count, value-1, value-2,......)
+    //added 23 and 30
+    arr.splice(2,0,23,30 )
+
+    //removing item from index
+    arr.splice(4,1,99 )
+    console.log(arr)
+
+    //adding before last index
+    arr.splice(arr.length-1,0,890 )
+    console.log(arr)
+
+    //showing array object between 
+    console.log(arr.splice(2,5))
+
+    //index of 
+    console.log(arr.indexOf(99))
+
+    //indexof(item,offset)
+    console.log(arr.indexOf(99,6))
+
+
+</pre>
+<script>
+    let arr=[8,32,5,7,1,99,53,24]
+    arr.splice(2,0,23,30 )
+    console.log(arr)
+
+    arr.splice(4,1,99 )
+    console.log(arr)
+
+    arr.splice(arr.length-1,0,890 )
+    console.log(arr)
+
+    
+   // console.log(arr.splice(2,5))
+
+    console.log(arr.indexOf(99))
+    console.log(arr.indexOf(99,6))
+
+
+</script>
