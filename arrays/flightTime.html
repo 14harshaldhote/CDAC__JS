@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" placeholder="planeNumber" id="planeNumber" name="planeNumber" required>
+            <input type="text" placeholder="planeName" id="planeName" name="planeName" required>
+            <input type="text" placeholder="time" id="time" name="time" required>
+            <button type="button" onclick="detail()"></button>
+
+        </form>
+    </div>
+    <script>
+        function detail(){
+            let planeNumber= document.getElementById("planeNumber").value;
+            let planeName= document.getElementById("planeName").value;
+            let time= document.getElementById("time").value;
+
+            const pdetails = {planeNumber: planeNumber, planeName:planeName, time:time};
+            
+        }
+    </script>
+</body>
+</html>
