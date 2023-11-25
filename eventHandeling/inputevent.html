@@ -1,0 +1,51 @@
+<script>
+    function selectss(inp){ 
+        console.log(Math.sqrt(parseInt(inp.value)))}
+
+    function funchnage(inpdoen){
+        console.log("drop down value", inpdoen.value)
+
+    }
+    function ischcek(checkbox){
+       // console.log(checkbox.checked+"---------"+ checkbox.value )
+       let btn=document.querySelector("#btn")
+       if(checkbox.checked){
+        btn.disabled=false
+        btn.style.backgroundColor="green"
+        btn.innerHTML="im enable me :)"
+       }
+       else{
+        btn.disabled=true
+        btn.style.backgroundColor="red"
+        btn.innerHTML="please enable me :("
+       }
+    }
+   
+</script>
+<input type="number" onchange="selectss(this)">
+
+
+<select onchange="funchnage(this)" >
+    <option>kjew</option>
+    <option>kjejkebfqkbw</option>
+    <option>cqdqhdhwew</option>
+    <option>kjqwdjgqdnqehjd2987365rew</option>
+</select>
+
+<select onchange="funchnage(this)" multiple > 
+    <option>kjew</option>
+    <option>kjejkebfqkbw</option>
+    <option>cqdqhdhwew</option>
+    <option>kjqwdjgqdnqehjd2987365rew</option>
+</select>
+
+check me: <input type="checkbox" onchange="ischcek(this)" value="hellooo">
+<br>
+radio me: <input type="radio" onchange="ischcek(this)" value="im radio">
+<br>
+<br>
+<br>
+<br>
+
+check me <input type="checkbox" onchange="ischcek(this)" value="shashankk">
+<button id="btn">checked </button>

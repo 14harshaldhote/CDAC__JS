@@ -1,0 +1,17 @@
+<script>
+    function keyUp(inp){
+        console.log(inp.value);
+        //alert("key is up");
+    }
+    function keyDown(){
+        alert("key is down");
+    }
+    function keyPress(inp){
+        console.log(inp.value);
+        //alert("key pressed");
+    }
+</script>
+
+<input onkeyup="keyUp(this)" name="action" >
+<input  onkeydown="keyDown()" name="action" >
+<input  onkeypress="keyPress(this)" name="action" >
