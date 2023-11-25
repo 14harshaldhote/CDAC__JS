@@ -1,0 +1,26 @@
+<script>
+    function goback(){
+        history.back();
+    }
+    function goforward(){
+        history.forward();
+    }
+    function goToPage(){
+        let page=parseInt(window.prompt("Give me page history number "))
+        history.go(page)
+    }
+    function getLen(){
+        alert(history.length());
+    }
+
+//goback()
+ //goforward()
+// goToPage()
+//getLen()
+
+</script>
+<button onclick="goforward()">Go forward</button>
+<button onclick="goback()">Go Back</button>
+<button onclick="goToPage()">Go To Page</button>
+
+<button onclick="goLen()">Get Len</button>
