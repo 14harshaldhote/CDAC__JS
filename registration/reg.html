@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Registration Form</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Your custom styles -->
     <style>
         body {
             background-color: #f8f9fa;
@@ -28,7 +26,7 @@
 
 <body>
     <div class="box">
-        <form id="registrationForm" autocomplete="off">
+        <form id="registrationForm" autocomplete="off" action="infoReg.html" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -80,32 +78,49 @@
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="agree" value="agree" required>
-                <label class="form-check-label" for="agree"><a href="#">Terms and Conditions</a></label>
+                <label class="form-check-label" for="agree" colo><a href="#">Terms and Conditions</a></label>
             </div>
             <button type="button" class="btn btn-primary" onclick="register()">Register</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Your custom script -->
+    
     <script>
-        function register() {
-            // Get current date and time
+       function register() {
             const currentDate = new Date();
-            console.log("Current Date and Time:", currentDate);
-
-            // Get user's geolocation
             navigator.geolocation.getCurrentPosition(success, error);
 
             function success(pos) {
                 const crd = pos.coords;
-                console.log(`Latitude: ${crd.latitude}`);
-                console.log(`Longitude: ${crd.longitude}`);
+
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    age: document.getElementById('age').value,
+                    mobile: document.getElementById('mobile').value,
+                    email: document.getElementById('email').value,
+                    password: document.getElementById('password').value,
+                    cpassword: document.getElementById('cpassword').value,
+                    gender: document.querySelector('input[name="gender"]:checked').value,
+                    city: document.getElementById('city').value,
+                    address: document.getElementById('address').value,
+                    agree: document.getElementById('agree').checked,
+                    date: currentDate.toISOString(),
+                    lat: crd.latitude,
+                    lon: crd.longitude
+                };
+
+                
+                const queryString = Object.keys(formData)
+                    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+                    .join('&');
+                const url = `infoReg.html?${queryString}`;
+                window.location.href = url;
             }
 
             function error(err) {

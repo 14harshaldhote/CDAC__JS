@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #495057;
+            text-align: center;
+        }
+
+        #info {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #343a40;
+        }
+
+        #label {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Registration Information</h1><br>
+        <div id="info"></div>
+        <div id="label"></div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var formData = {
+            name: getParameterByName('name'),
+            age: getParameterByName('age'),
+            mobile: getParameterByName('mobile'),
+            email: getParameterByName('email'),
+            gender: getParameterByName('gender'),
+            city: getParameterByName('city'),
+            address: getParameterByName('address'),
+            agree: getParameterByName('agree'),
+            date: getParameterByName('date'),
+            lat: getParameterByName('lat'),
+            lon: getParameterByName('lon')
+        };
+
+        var info = document.getElementById('info');
+        info.innerHTML += `<p><strong>Name:</strong> ${formData.name}</p>`;
+        info.innerHTML += `<p><strong>Age:</strong> ${formData.age}</p>`;
+        info.innerHTML += `<p><strong>Mobile No.:</strong> ${formData.mobile}</p>`;
+        info.innerHTML += `<p><strong>Email:</strong> ${formData.email}</p>`;
+        info.innerHTML += `<p><strong>Gender:</strong> ${formData.gender}</p>`;
+        info.innerHTML += `<p><strong>City:</strong> ${formData.city}</p>`;
+        info.innerHTML += `<p><strong>Address:</strong> ${formData.address}</p>`;
+        info.innerHTML += `<p><strong>Agree to Terms:</strong> ${formData.agree}</p>`;
+
+        // Display label at the bottom
+        var label = document.getElementById('label');
+        var registrationTime = new Date(formData.date);
+        label.innerHTML = `<p>The form was registered at ${registrationTime.toLocaleString()} at location Latitude ${formData.lat}, Longitude ${formData.lon}.</p>`;
+    </script>
+</body>
+
+</html>
