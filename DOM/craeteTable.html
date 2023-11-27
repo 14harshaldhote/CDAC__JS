@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function addTableRow() {
+            let table = document.querySelector("#myT");
+            let row = table.insertRow(-1); 
+            let cell1 = row.insertCell(0); 
+            // let cell2 = row.insertCell(1);
+
+            cell1.innerHTML = "New Cell 1"; 
+            //cell2.innerHTML = "New Cell 2";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="addTableRow()">Add Table Row</button>
+
+    <table id="myT">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

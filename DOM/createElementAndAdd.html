@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addListItem(){
+            let list = document.querySelector("#list")
+            let li = document.createElement("li")
+            let text = document.createTextNode("World")
+            li.appendChild(text);
+
+            li.appendChild(li);
+
+            //document.querySelector("#list").innerHTML +="<i>World</i>"
+        } prompt
+    </script>
+</head>
+<body>
+    <ol id="list">
+        <li>Hello</li>
+    </ol>
+
+    <button onclick="addListItem()">Add List Item</button>
+</body>
+</html>
