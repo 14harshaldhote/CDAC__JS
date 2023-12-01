@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#box-remove").click(function () {
+                $("#dibbi").removeClass("bg-color")
+            })
+
+            $("#box-add").click(function () {
+                $("#dibbi").addClass("bg-color")
+            })
+            $("#box-toggle").click(function () {
+                if ($("#dibbi").hasClass("bg-color")) {
+                    $("#dibbi").removeClass("bg-color")
+                } else {
+                    $("#dibbi").addClass("bg-color")
+                }
+
+            })
+
+        })
+    </script>
+
+    <style>
+        .bg-color {
+            background-color: rgb(241, 187, 228);
+        }
+
+        #dibbi {
+            height: 200px; 
+            width: 100px; 
+            border: 1px solid black;
+            border-radius: 70%; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="height: 600px; width: 600px; border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+        <span id="dibbi"></span>
+    </div>
+    <button id="box-remove">Remove Class</button>
+    <button id="box-add">Add Class</button>
+    <button id="box-toggle">Toggle Class</button>
+</body>
+
+</html>
