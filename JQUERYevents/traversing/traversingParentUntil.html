@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        div,span{
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("span").parentsUntil(".div1").css({"border": "5px solid green"})
+        })
+    </script>
+</head>
+<body>
+    <pre>
+        upward => parent(), parents(), parentsUntil()
+    </pre>
+
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">
+                <span>
+                    This is span
+                </span>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
