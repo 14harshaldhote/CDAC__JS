@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            padding: 20px 30px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(this).parent().css({"background-color":"#FFB6C1"});
+            });
+            $("#btn2").click(function () {
+                $(this).parent().css({"background-color":"#FFC0CB"});
+            });
+            $("#btn3").click(function () {
+                $(this).parent().css({"background-color":"#DD85D7"});
+            });
+            // $("btn2").click(function () {});
+            // $("btn3").click(function () {});
+        });
+    </script>
+</head>
+
+<body>
+    <div class="div1">
+        <button type="button" id="btn1">Gulabi</button>
+    </div>
+    <div class="div2">
+        <button type="button" id="btn2">Pink</button>
+    </div>
+
+    <div class="div3">
+        
+            <button type="button" id="btn3">LavendorPink</button>
+        
+
+
+    </div>
+</body>
+
+</html>

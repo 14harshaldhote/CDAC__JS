@@ -1,0 +1,45 @@
+<script>
+    arr1 = [55, 23, 123, 99, 6, 33, 74, 25, 88, 0]
+
+    // n1=arr[0]
+    // n2=arr[1]
+    // n3=arr[2]
+    // n4=arr[3]
+    // n5=arr[4]
+    // n6=arr[5]
+    // n7=arr[6]
+    // n8=arr[7]
+    // n9=arr[8]
+    // n10=arr[0]
+
+    let [n1, n2, n3, n4, , , n7, n8, n9, n10] = arr1
+    console.log(n3, n4, n8)
+
+    let prea = { name: "Lalait", age: 43, propety: "1000 acr jamin" }
+    let { name, age, propety } = prea
+    console.log(propety)
+
+
+    const show = ({ name, age, propety }) => {
+        console.log(propety)
+
+    }
+    newg = { name: "Lalait", age: 43, propety: "1000 acr jamin" }
+    show(newg)
+
+
+
+    function myBio(firstName, lastName, ...otherInfo) {
+        return otherInfo;
+    }
+
+    // Invoke myBio function while passing five arguments to its parameters:
+    myBio("Oluwatobi", "Sofela", "CodeSweetly", "Web Developer", "Male");
+
+    
+    function myBio(firstName, lastName, company) {
+        return `${firstName} ${lastName} runs ${company}`;
+    }
+
+    myBio(...["Oluwatobi", "Sofela", "CodeSweetly"]);
+</script>

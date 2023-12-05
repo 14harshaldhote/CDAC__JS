@@ -1,0 +1,58 @@
+<pre>
+    ...array/object
+
+    if had taken refrence of arr to arr1
+    - then all the values of arr get refrced to the arr1 even when we upadte
+
+    but uisng ...(sepread) operator is we are copying array into arr1 and we can also add new elemet into array
+    (which will only reflect in arr1 not in arr) for refcrec take a look at console
+
+    function showrar(sarr){
+        // saar.push
+        sarr.push(99999)
+        console.log(sarr)
+    }
+    sarr1=[55,23,123,99,6,33,74,25,88,0]
+    showrar([...sarr1])
+
+
+
+</pre>
+
+<script>
+    let arr=[55,23,123,99,6,33,74,25,88,0]
+    let arr1=[...arr,93,11]
+    // arr.forEach((e)=>{
+    //     arr1.push(e)
+
+    // })
+    console.log(arr1+" im the arr1")
+    console.log(arr)
+
+
+    let prea={name:"Lalait", age:43}
+    let pemp={...prea, mobile:36426523465}
+
+    console.log(prea,pemp)
+    console.log(pemp)
+
+
+        function show(pap){
+            pap["address"]="Nagpur"
+            console.log(pap)
+           
+        }
+        nan={name:"Manish jalana", age:13}
+        show({...nan})
+        console.log(nan)
+
+
+        function showrar(sarr){
+            // saar.push
+            sarr.push(99999)
+            console.log(sarr)
+        }
+        sarr1=[55,23,123,99,6,33,74,25,88,0]
+        showrar([...sarr1])
+
+</script>

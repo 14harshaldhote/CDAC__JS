@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        div,
+        span {
+            padding: 30px;
+            border: 1px solid black;
+            margin: 50px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".div1").find("span.text").css({"border":"4px solid red"})
+        })
+    </script>
+</head>
+
+<body>
+    <pre>
+        upward => parent(), parents(), parentUntil()
+    </pre>
+
+    <div class="div1">
+        <span class="text">This is span</span>
+        <span class="text">This is span</span>
+
+        <div class="div2">
+            <span class="text">This is span</span>
+
+            <div class="div3">
+                <span>This is span</span>
+                <span class="text">This is span</span>
+                <span class="text">This is span</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
