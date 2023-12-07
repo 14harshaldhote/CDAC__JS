@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import About from './About';
 
 function Content(props) {
     const [name, setName] = useState('');
@@ -7,7 +8,9 @@ function Content(props) {
 
     return (
         <div>
-            <div className='alert alert-light' style={{ height: '70vh', backgroundColor: 'black', color: 'white' }}>
+           
+            <div className='alert alert-light' style={{ height: 'auto', backgroundColor: 'black', color: 'white' }}>
+            {/* <About /> */}
                 <p>
                     APNE SARE BHAIYO K NAAM
 
@@ -54,16 +57,12 @@ function Content(props) {
                             setNum2(event.target.value);
                         }}
                     ></input>
-                   {/* <button
-    onClick={() => {
-        props.additionnn(Number(num1) + Number(num2));
-    }}
->Sum: ${Number(num1) + Number(num2)}`
-    Add Numbers
-</button> */}
+                   
                     <h1>{num1+num2}</h1>
                 </div>
+                
             </div>
+            
         </div>
     );
 }

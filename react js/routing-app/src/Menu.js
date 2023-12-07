@@ -10,7 +10,7 @@ function Menu() {
 
                 </li>
                 <li><Link to="about" >ABOUT</Link></li>
-                <li><Link to="content" >CONTENT</Link></li>
+                <li><Link to="contact" >CONTACT</Link></li>
                 <li><Link to="services">SERVICES</Link></li>
             </nav>
             <Outlet/>

@@ -5,7 +5,7 @@ import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 function Table({ data, onEdit, onDelete }) {
   return (
     <div  className="custom-table-container">
-      <table className="table mt-5">
+      <table className="table mt-5 table-info">
         <thead className="thead-dark">
           <tr>
             <th scope="col">ID</th>
@@ -17,7 +17,7 @@ function Table({ data, onEdit, onDelete }) {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
+          {data.map((item, index) => {
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
@@ -33,7 +33,7 @@ function Table({ data, onEdit, onDelete }) {
                 </button>
               </td>
             </tr>
-          ))}
+          })}
         </tbody>
       </table>
     </div>
