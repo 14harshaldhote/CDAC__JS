@@ -1,0 +1,16 @@
+const path = require('path');
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hey there, it\'s a response from Express!');
+});
+
+const port = 3030;
+const host = '127.0.0.1';
+const serverPath = path.join(__dirname, 'Server.js');
+
+app.listen(port, host, () => {
+    console.log(`Server started on http://${host}:${port}`);
+});

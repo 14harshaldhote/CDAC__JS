@@ -1,0 +1,5 @@
+const addition=(n1,n2) => {
+    console.log(n1+n2)
+}
+
+addition(50,30)

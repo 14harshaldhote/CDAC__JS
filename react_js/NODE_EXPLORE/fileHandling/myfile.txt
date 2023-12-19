@@ -1,0 +1,1 @@
+New Data for writeFileSync() Anupam...Append Data sync()...Append Data async()... ok okk

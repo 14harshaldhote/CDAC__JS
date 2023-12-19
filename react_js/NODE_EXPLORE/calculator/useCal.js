@@ -1,0 +1,5 @@
+const calculator=require('./Cal')
+calculator.add(20,40)
+calculator.sub(20,40)
+calculator.mul(20,40)
+calculator.div(20,40)
